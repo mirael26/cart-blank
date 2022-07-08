@@ -13,7 +13,7 @@ const Statictics = ({ products, discount }: StatisticsProps): JSX.Element => {
     return sum + product.price;
   }, 0);
   
-  const discountSum = sum && discount ? (sum - (sum * discount) / 100).toFixed(2) : null;
+  const discountSum = sum && discount ? +((sum - (sum * discount) / 100).toFixed(2)) : null;
 
   return (
     <div className="statistics">

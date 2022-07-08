@@ -9,7 +9,7 @@ interface ProductProps {
 };
 
 const Product = ({ product, deleteProduct, discount }:ProductProps): JSX.Element => {
-  const discountPrice = discount ? (product.price - (product.price * discount) / 100).toFixed(2) : null;
+  const discountPrice = discount ? +((product.price - (product.price * discount) / 100).toFixed(2)) : null;
 
   return (
     <div className="product">
