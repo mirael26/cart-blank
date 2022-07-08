@@ -1,0 +1,47 @@
+.new-product {
+  padding: 50px 180px 50px;
+}
+
+.new-product__title {
+  @include h2;
+  margin-bottom: 15px;
+}
+
+.new-product__form {
+  display: flex;
+  gap: 20px;
+}
+
+.new-product__input {
+  @include text;
+  padding: 5px 10px;
+  border: 1px solid $blue;
+  border-radius: 10px;
+
+  &--id {
+    width: 120px;
+  }
+
+  &--name {
+    width: 400px;
+  }
+
+  &--price {
+    width: 120px;
+  }
+
+  &::placeholder {
+    @include placeholder;
+  }
+}
+
+.new-product__add-button {
+  @include button;
+}
+
+.new-product__error-message {
+  @include text;
+  margin-left: 26%;
+  margin-top: 8px;
+  color: #db2121;
+}
