@@ -24,7 +24,7 @@ const App = (): JSX.Element => {
     <React.Fragment>
       <NewProduct addNewProduct={addNewProduct} />
       <ProductList products={products} setProducts={setProducts}/>
-      <Statictics />
+      <Statictics products={products} />
       <Discount />
     </React.Fragment>
   );
