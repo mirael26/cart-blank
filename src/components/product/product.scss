@@ -19,6 +19,11 @@
 .product__price {
   @include text;
   width: 10%;
+
+  &--crossed {
+    text-align: end;
+    text-decoration: line-through;
+  }
 }
 
 .product__delete-button {

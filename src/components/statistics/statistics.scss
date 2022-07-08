@@ -32,4 +32,8 @@
 .statistics__text {
   @include text;
   font-size: 20px;
+
+  &--crossed {
+    text-decoration: line-through;
+  }
 }

@@ -23,8 +23,8 @@ const App = (): JSX.Element => {
   return (
     <React.Fragment>
       <NewProduct addNewProduct={addNewProduct} />
-      <ProductList products={products} setProducts={setProducts}/>
-      <Statictics products={products} />
+      <ProductList products={products} setProducts={setProducts} discount={discount}/>
+      <Statictics products={products} discount={discount}/>
       <Discount setDiscount={setDiscount} />
     </React.Fragment>
   );

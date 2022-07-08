@@ -7,9 +7,10 @@ import Product from "../product/product";
 interface ProductListProps {
   products: Products,
   setProducts: (products: Products) => void,
+  discount: number,
 };
 
-const ProductList = ({ products, setProducts }: ProductListProps): JSX.Element => {
+const ProductList = ({ products, setProducts, discount }: ProductListProps): JSX.Element => {
   const deleteProduct = (deletedProductId: number) => {
     const newProducts = products.filter(product => product.id !== deletedProductId);
     setProducts(newProducts);
@@ -21,7 +22,7 @@ const ProductList = ({ products, setProducts }: ProductListProps): JSX.Element =
       {!products.length
         ? <p className="product-list__empty-message">Список пуст</p>
         : products.map((product, i) => {
-          return <Product product={product} deleteProduct={deleteProduct} key={i} />
+          return <Product product={product} deleteProduct={deleteProduct} discount={discount} key={i} />
         })
       }
     </div>
