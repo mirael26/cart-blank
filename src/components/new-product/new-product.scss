@@ -1,5 +1,7 @@
 .new-product {
-  padding: 50px 180px 50px;
+  position: relative;
+  max-width: 1250px;
+  padding: 50px 180px 0;
 }
 
 .new-product__title {
@@ -41,7 +43,8 @@
 
 .new-product__error-message {
   @include text;
-  margin-left: 26%;
-  margin-top: 8px;
+  position: absolute;
+  bottom: -38px;
+  left: 35%;
   color: #db2121;
 }

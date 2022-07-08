@@ -9,7 +9,7 @@ interface NewProductProps {
 
 const NewProduct = ({ addNewProduct }: NewProductProps): JSX.Element => {
 
-  const [formValue, setformValue] = useState({id: '', name: '', price: ''});
+  const [formValue, setFormValue] = useState({id: '', name: '', price: ''});
   const [isError, setError] = useState(false);
 
   const onFormSubmit = (evt: React.SyntheticEvent) => {
@@ -25,12 +25,12 @@ const NewProduct = ({ addNewProduct }: NewProductProps): JSX.Element => {
         price: +formValue.price,
       }
     );
+    setFormValue({id: '', name: '', price: ''});
   };
 
   const onInputChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
     setError(false);
-    console.log(evt.target.value);
-    setformValue({...formValue, [evt.target.name]: evt.target.value});
+    setFormValue({...formValue, [evt.target.name]: evt.target.value});
   }
 
   return (
