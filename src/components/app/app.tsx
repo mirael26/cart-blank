@@ -10,19 +10,20 @@ import Discount from "../discount/discount";
 
 
 const App = (): JSX.Element => {
-  const [products, setProducts] = useState(null);
+  const [products, setProducts] = useState([]);
   const [discount, setDiscount] = useState(0);
 
   const addNewProduct = (product: Product) => {
     const newProducts = products.slice();
     newProducts.push(product);
+    console.log(newProducts);
     setProducts(newProducts);
   };
 
   return (
     <React.Fragment>
       <NewProduct addNewProduct={addNewProduct} />
-      <ProductList/>
+      <ProductList products={products} setProducts={setProducts}/>
       <Statictics />
       <Discount />
     </React.Fragment>

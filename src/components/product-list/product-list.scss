@@ -1,0 +1,17 @@
+.product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 1250px;
+  padding: 50px 180px 50px;
+}
+
+.product-list__title {
+  @include h2;
+}
+
+.product-list__empty-message {
+  @include text;
+  text-align: center;
+  font-size: 30px;
+}

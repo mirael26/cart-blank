@@ -1,0 +1,26 @@
+.product {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.product__id {
+  @include text;
+  width: 10%;
+}
+
+.product__name {
+  @include text;
+  width: 10%;
+  flex-grow: 1;
+
+}
+
+.product__price {
+  @include text;
+  width: 10%;
+}
+
+.product__delete-button {
+  @include button;
+}
