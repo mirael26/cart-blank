@@ -16,7 +16,6 @@ const App = (): JSX.Element => {
   const addNewProduct = (product: Product) => {
     const newProducts = products.slice();
     newProducts.push(product);
-    console.log(newProducts);
     setProducts(newProducts);
   };
 
