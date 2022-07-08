@@ -1,0 +1,44 @@
+.discount {
+  max-width: 1250px;
+  padding: 50px 180px 30px;
+}
+
+.discount__title {
+  @include h2;
+  margin-bottom: 15px;
+}
+
+.discount__block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.discount__text {
+  @include h3;
+}
+
+.discount__input {
+  @include text;
+  width: 150px;
+  padding: 5px 10px;
+  border: 1px solid $blue;
+  border-radius: 10px;
+
+  &::placeholder {
+    @include placeholder;
+  }
+}
+
+.discount__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.discount__button {
+  @include button;
+}
